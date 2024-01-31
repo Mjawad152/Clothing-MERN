@@ -1,12 +1,22 @@
 //npm run server
 import express from 'express';
 import dotenv from 'dotenv';
-
+import morgan from 'morgan';
+import connectDB from './config/db.js';
 // env configure
 dotenv.config();
 
 // Create an express app
 const app = express()
+
+
+//db connect
+connectDB();
+
+//middleware 
+app.use(express.json())
+app.use(morgan('dev'))
+
 
 // Define a port using the environment variable or default to 8000
 const PORT = process.env.PORT || 8000;

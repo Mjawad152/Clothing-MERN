@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import connectDB from './config/db.js';
 import cors from 'cors'
 import authRoutes from './routes/authRoute.js'
+import categoryRoute from './routes/categoryRoutes.js';
 // env configure
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(morgan('dev'));
 
 //routes
 app.use("/api/v1/auth/", authRoutes);
+app.use("/api/v1/category",categoryRoute)
 
 
 // Define a port using the environment variable or default to 8000

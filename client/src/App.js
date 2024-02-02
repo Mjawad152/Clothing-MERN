@@ -20,7 +20,7 @@ import Products from './pages/Admin/Products';
 import Users from './pages/Admin/Users';
 import AdminOrders from './pages/Admin/AdminOrders'
 import UpdateProduct from './pages/Admin/UpdateProduct'
-import PrivateRoute from './components/Routes/AdminRoute';
+import PrivateRoute from './components/Routes/Private';
 import Orders from './pages/user/Orders';
 import Profile from './pages/user/Profile'
 function App() {

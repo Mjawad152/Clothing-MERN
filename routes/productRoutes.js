@@ -24,15 +24,15 @@ const router = express.Router();
 router.post(
   "/create-product",
   requireSignIn,
-  isAdmin,
+  // isAdmin,
   formidable(),
   createProductController
 );
 //routes
 router.put(
   "/update-product/:pid",
-  requireSignIn,
-  isAdmin,
+  // requireSignIn,
+  // isAdmin,
   formidable(),
   updateProductController
 );

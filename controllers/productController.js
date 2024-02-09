@@ -1,7 +1,6 @@
 import productModel from "../models/productModel.js";
 import categoryModel from "../models/categoryModel.js";
 import orderModel from "../models/orderModel.js";
-
 import fs from "fs";
 import slugify from "slugify";
 import braintree from "braintree";
@@ -10,12 +9,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //payment gateway
-// var gateway = new braintree.BraintreeGateway({
-//   environment: braintree.Environment.Sandbox,
-//   merchantId: process.env.BRAINTREE_MERCHANT_ID,
-//   publicKey: process.env.BRAINTREE_PUBLIC_KEY,
-//   privateKey: process.env.BRAINTREE_PRIVATE_KEY,
-// });
+var gateway = new braintree.BraintreeGateway({
+  environment: braintree.Environment.Sandbox,
+  merchantId: process.env.BRAINTREE_MERCHANT_ID,
+  publicKey: process.env.BRAINTREE_PUBLIC_KEY,
+  privateKey: process.env.BRAINTREE_PRIVATE_KEY,
+});
 
 
 export const createProductController = async (req, res) => {
@@ -35,7 +34,7 @@ export const createProductController = async (req, res) => {
         return res.status(500).send({ error: "Category is Required" });
       case !quantity:
         return res.status(500).send({ error: "Quantity is Required" });
-      case photo && photo.size > 1000000:
+      case photo && photo.size > 1000000000:
         return res
           .status(500)
           .send({ error: "photo is Required and should be less then 1mb" });

@@ -110,10 +110,11 @@ const HomePage = () => {
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
       <img
-        src=""
+        src="https://static.vecteezy.com/system/resources/thumbnails/011/871/820/small/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg"
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
+        style={{height:"400px"}}
       />
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">

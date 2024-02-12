@@ -24,12 +24,12 @@ const UserMenu = () => {
           >
             Create Product
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/dashboard/user/products"
             className="list-group-item list-group-item-action"
           >
             Products
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
     </div>

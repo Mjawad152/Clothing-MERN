@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import UserMenu from "../../components/Layout/UserMenu";
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -26,7 +27,8 @@ const Products = () => {
     <Layout>
       <div className="row dashboard">
         <div className="col-md-3">
-          <AdminMenu />
+          {/* <AdminMenu /> */}
+          <UserMenu/>
         </div>
         <div className="col-md-9 ">
           <h1 className="text-center">All Products List</h1>
